@@ -12,4 +12,6 @@ HTML5, Jinja2
 
 Since there was already created solution from bootstrap, my next step will be to do the Front-End stuff from scratch
 Particularly fixing some bugs, adding a lot more fuctionallity, API,security, a lot more options and of course deploying it to the web. 
+
+Adding Design view to log in page. Whole website will be in such design and I would like to implement through CSS+JS
 ![Design](https://user-images.githubusercontent.com/47592075/56497097-d9cee400-6504-11e9-949f-8f4940d16e9d.jpg)
