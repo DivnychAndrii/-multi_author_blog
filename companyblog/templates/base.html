@@ -12,11 +12,11 @@
         <div class="logo">Logo</div>
           <ul class="menu-area">
             <li><a href="{{url_for("core.index")}}">Home</a></li>
-            <li><a href="{{url_for("core.info")}}">About</a></li>
             {% if current_user.is_authenticated %}
+            <li><a href="{{url_for("core.info")}}">Notes</a></li>
             <li><a href="{{url_for("users.logout")}}">Log out</a></li>
             <li><a href="{{url_for("users.account")}}">Account</a></li>
-            <li><a href="{{url_for("blog_posts.create_post")}}">Create a post</a></li>
+            <li><a href="{{url_for("blog_posts.create_post")}}">Create a note</a></li>
             {%  else  %}
             <li><a href="{{url_for("users.login")}}">Log in</a></li>
             <li><a href="{{url_for("users.register")}}">Register</a></li>

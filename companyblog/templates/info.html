@@ -1,9 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="jumbotron">
-    <h1>Info about us </h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{% for post in blog_posts.items %}
+<div>
+  <div>
+    <h2><a href="  {{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
+    <a href="{{ url_for('users.user_posts', username=post.author.username) }}">Written By: {{ post.author.username }}</a>
+    <p>Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
+    <p>{{ post.text[:100] }}...</p>
+    <a href="{{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}">Read Blog Post</a>
   </div>
+</div>
+{% endfor %}
+
+</div>
+<nav>
+<ul>
+  {% for page_num in blog_posts.iter_pages(left_edge=1,right_edge=1, left_current=1, right_current=2) %}
+    {% if blog_posts.page == page_num %}
+      <li>
+        <a href="url_for("core.index", page=page_num)">{{ page_num }}</a>
+      </li>
+    {% else %}
+    <li>
+      <a href="url_for("core.index", page=page_num)">{{ page_num }}</a>
+    {% endif %}
+  {% endfor %}
+</ul>
+</nav>
 
 
 {% endblock %}

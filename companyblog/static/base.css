@@ -1,5 +1,7 @@
 *{
   outline: 0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   color: white;
 }
@@ -9,7 +11,6 @@
 .menu-area li {
   list-style-type: none;
 }
-
 nav {
   position: relative;
   width: calc(100% - 60px);
@@ -19,38 +20,37 @@ nav {
   padding-right: 2%;
 }
 .logo {
-    width: 15%;
-    float: left;
-    padding: 18px 0;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 25px;
-    text-align: left;
-    padding-left: 2%;
+  width: 15%;
+  float: left;
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 25px;
+  text-align: left;
+  padding-left: 2%;
 }
 .menu-area li {
-    display: inline-block;
+  display: inline-block;
 }
 .menu-area a {
-    color: white;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: block;
-    padding: 0 25px;
-    font-size: 17px;
-    line-height: 30px;
-    position: relative;
-    z-index: 1;
-    border-radius: 20px;
-    transition: 0.25s;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 25px;
+  font-size: 17px;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  transition: 0.25s;
 }
 .menu-area a:hover {
   background: -webkit-linear-gradient(#a410ff, #3161ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 .menu-area a:hover:after {
-    transform: translateY(-50%) rotate(-35deg);
+  transform: translateY(-50%) rotate(-35deg);
 }
