@@ -13,11 +13,8 @@ body{
   max-width: 850px;
   width: 100%;
   height: 400px;
-<<<<<<< HEAD
   margin: 200px auto ;
-=======
   margin: 150px auto ;
->>>>>>> 8a400a6eb08b86e7292cdc806d8fb9b001448aac
   text-align: center;
 }
 .box input[type="text"], .box input[type="password"]{
